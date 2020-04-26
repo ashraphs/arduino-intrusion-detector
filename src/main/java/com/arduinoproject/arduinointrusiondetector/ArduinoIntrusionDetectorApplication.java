@@ -20,11 +20,12 @@ public class ArduinoIntrusionDetectorApplication {
     public static void main(String[] args) throws IOException, InterruptedException {
         SpringApplication.run(ArduinoIntrusionDetectorApplication.class, args);
 
-        String URL = "https://api.airtable.com/v0/appobiA05lR9WxHfS/alarm_intrusion_detector";
-        String auth = "keyhLqhEb3xJkWCJ4";
+        String commPort= "COM4"; // Please change to your com serial port.
+        String URL = "https://api.airtable.com/v0/appobiA05lR9WxHfS/alarm_intrusion_detector"; // Please change to your URL
+        String auth = "keyhLqhEb3xJkWCJ4"; // Please change to your auth token
 
         // Configuration to communicate to arduino
-        SerialPort sp = SerialPort.getCommPort("COM4");
+        SerialPort sp = SerialPort.getCommPort(commPort);
         sp.setComPortParameters(115200, 8, 1, 0); // default connection settings for Arduino
         sp.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0); // block until bytes can be written
 

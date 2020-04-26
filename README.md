@@ -27,4 +27,18 @@ __Arduino code__ | arduino-intrusion-detector/arduino_ultrasonic_sensor
 ## Diagram
 Diagram of intrusion detector:
 
-![Diagram of ](https://octodex.github.com/images/yaktocat.png)
+![Diagram of intrusion detector](https://github.com/ashraphs/arduino-intrusion-detector/blob/master/images/arduino.png?raw=true)
+
+## Notification flow
+The notification send through IFTT, when the data insert in the AirTable.
+
+### IFTT
+
+if This
+`Airtable-new record created`
+then
+`Send the alert through notification`
+
+Diagram of IFTT in mobile app
+
+![Diagram of IFTT](https://github.com/ashraphs/arduino-intrusion-detector/blob/master/images/iftt.jpg?raw=true)
